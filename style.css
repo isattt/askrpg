@@ -27,7 +27,7 @@ a:hover {
     text-decoration: none;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 900px) {
 
     html,
     body {
