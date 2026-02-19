@@ -1,0 +1,149 @@
+html,
+body {
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    margin: 0;
+    background-image: url(imgs/stars.png);
+    background-repeat: repeat;
+}
+
+.parent {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: flex;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+    background-color: white;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+}
+
+@media (max-width: 950px) {
+
+    html,
+    body {
+        background-image: none;
+        background-color: white;
+    }
+
+    .parent {
+        flex-direction: column-reverse;
+        border-left: none;
+        border-right: none;
+    }
+    .title{
+        display: none;
+    }
+
+    .sidenav {
+        border-right: none;
+        border-bottom: none;
+        border-right: none !important;
+        flex: none;
+    }
+
+    .end{
+        display: none;
+    }
+
+    .stamps{
+        margin-top: -3rem;
+        display: none;
+    }
+
+    .selection{
+        margin-top: -3rem !important;
+        border-image-source: none !important;
+    }
+
+    .selection li {
+        margin: 20px !important;
+        border-image-slice: 20;
+        border-image-width: 20px;
+        border-image-source: url(imgs/border.png);
+    }
+}
+
+/* --------------------  sidenav */
+
+.title {
+    border-bottom: 1px solid black;
+    margin: -3rem -3rem;
+    padding: 3rem
+}
+
+.sidenav {
+    text-align: center;
+    border-right: 1px solid black;
+    display: flex;
+    flex: 0 0 260px;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem;
+    background-color: white;
+}
+
+.selection {
+    border-image-slice: 20;
+    border-image-width: 20px;
+    border-image-source: url(imgs/border.png);
+    padding: 2rem;
+    margin: 0 3rem;
+    margin-top: 3rem;
+}
+
+.selection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.selection li {
+    padding: 20px 0;
+}
+
+.stamps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* --------------------  content */
+.content {
+    text-align: left;
+    min-width: 0;
+    padding: 3rem;
+    background-color: white;
+    flex: 1;
+}
+
+.content-title {
+    text-align: center;
+}
+
+.content-title img {
+    display: block;
+    margin: 0 auto !important;
+}
+
+.panel {
+    display: none;
+}
+
+.panel:target {
+    display: block;
+}
+
+.content:not(:has(.panel:target)) #rules {
+    display: block;
+}
