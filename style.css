@@ -62,14 +62,22 @@ a:hover {
 
     .selection{
         margin-top: -3rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
         border-image-source: none !important;
     }
 
     .selection li {
-        margin: 20px !important;
+        margin: 20px 0 !important;
         border-image-slice: 20;
         border-image-width: 20px;
         border-image-source: url(imgs/border.png);
+    }
+
+    .content-title img{
+        display: block;
+        margin: auto;
+        max-width: 100%;
     }
 }
 
